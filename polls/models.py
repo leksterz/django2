@@ -21,3 +21,15 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+class Availability(models.Model):
+    date_of_session = models.DateField(
+        verbose_name=('Date Of'),
+        blank=True, null=True,
+    )
+
+    twelve_to_one = models.BooleanField(default=False)
+    one_to_two = models.BooleanField(default=False)
+    two_to_three = models.BooleanField(default=False)
+    three_to_four = models.BooleanField(default=False)
+
