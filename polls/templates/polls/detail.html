@@ -1,0 +1,29 @@
+{% if latest_availability_list %}
+    <ul>
+    <p>gang</p>
+    {% for availability in latest_availability_list %}
+        <form action="/action_page.php" id="carform">
+            {% if availability.twelve_to_one %}
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> </label><br>
+            {% endif %}
+            {% if availability.one_to_two %}
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            {% endif %}
+            {% if availability.two_to_three %}
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            {% endif %}
+            {% if availability.three_to_four %}
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            {% endif %}
+
+            <input type="submit">
+        </form>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
