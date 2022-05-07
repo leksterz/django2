@@ -1,6 +1,6 @@
 {% if latest_availability_list %}
     <ul>
-    <p>gang</p>
+    {{ request.path }}
     {% for availability in latest_availability_list %}
         <form action="/action_page.php" id="carform">
             {% if availability.twelve_to_one %}
